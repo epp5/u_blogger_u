@@ -1,0 +1,49 @@
+<div class="container">
+<div class="wrapper">
+<form class="form-horizontal" method="post" action="/author">
+    <fieldset>
+        <!-- Form Name -->
+        <legend><h1>Submit a new U_Blog-post!</h1></legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="blog-title">Post Title</label>
+            <div class="col-md-4">
+                <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="url-input">Image URL</label>
+            <div class="col-md-6">
+                <input id="image_url" name="image_url" type="text" placeholder="Image url" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="text-area">Blog Post</label>
+            <div class="col-md-6">
+                <textarea class="form-control" id="content" name="content">A new blog post!</textarea>
+            </div>
+        </div>
+
+        <input hidden id="owner_id" name="owner_id" value="{{user._id}}">
+        <input hidden id="username" name="username" value="{{user.username}}">
+
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+                <button id="button1id" class="btn btn-primary">Submit</button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <a href="/" class="btn btn-warning">Cancel - Return home</a>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
+</div>

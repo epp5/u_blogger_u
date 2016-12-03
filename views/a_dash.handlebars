@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="wrapper">
+        <h1>Welcome Admin {{user.username}}!</h1>
+        <h2>List of users</h2>
+        <ol>
+            {{#each user as |user_n|}}
+                <li><a href="/see_this_users_posts/{{{user_n.id}}}">{{user_n.username}}</a></li>
+            {{/each}}
+        </ol>
+        <a href="/" class="btn btn-primary">Return home</a>
+    </div>
+</div>

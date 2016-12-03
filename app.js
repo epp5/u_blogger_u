@@ -18,7 +18,7 @@ var handlebars = require('express-handlebars')
 	.create({ defaultLayout:'main' });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 8080);
 
 // Set up body parser and cookie parser
 app.use(bodyParser.json());

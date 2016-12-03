@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="wrapper">
+        <table class="table">
+            <th colspan="3"><h3>All public posts</h3></th>
+            <tr>
+                <form class="form-horizontal" method="post" action="/search">
+                    <td colspan="2">
+                        <input id="q_id"
+                               name="q_id" type="text"
+                               placeholder="Search blog content"
+                               class="form-control input-md" required>
+                    </td>
+                    <td>
+                        <button id="button1id" class="btn btn-success">Submit</button>
+                    </td>
+                </form>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <th>Date Posted</th>
+                <th>User</th>
+            </tr>
+            {{#if post}}
+                {{#each post as |post|}}
+                    <tr>
+                        <td><a href="/view/{{{post._id}}}">{{{post.title}}}</a></td>
+                        <td>{{post.c_date}}</td>
+                        <td>{{post.owner_name}}</td>
+                    </tr>
+                {{/each}}
+            {{else}}
+                <tr>
+                    <td></td>
+                    <td>No one seems to have posted yet</td>
+                    <td></td>
+                </tr>
+            {{/if}}
+        </table>
+        <a href="/" class="btn btn-primary">Return home</a>
+    </div>
+</div>

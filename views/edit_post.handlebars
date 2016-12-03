@@ -1,0 +1,47 @@
+<div class="container">
+<div class="wrapper">
+    {{#each post as |posts|}}
+<form class="form-horizontal" method="post" action="/save_our_edit">
+    <fieldset>
+        <!-- Form Name -->
+        <legend><h1>Edit your U_Blog-post!</h1></legend>
+        <!-- Text input-->
+        <input hidden name="id" id="id" value="{{{posts.id}}}">
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="blog-title">Post Title</label>
+            <div class="col-md-4">
+                <input id="title" value="{{{posts.title}}}" name="title" type="text" placeholder="Title" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="url-input">Image URL</label>
+            <div class="col-md-6">
+                <input id="image_url" value="{{{posts.image_url}}}" name="image_url" type="text" placeholder="Image url" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="text-area">Blog Post</label>
+            <div class="col-md-6">
+                <textarea class="form-control" value="{{{posts.content}}}" id="content" name="content">A new blog post!</textarea>
+            </div>
+        </div>
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+                <button id="button1id" class="btn btn-primary">Submit</button>
+                <a href="/" class="btn btn-warning">Cancel - Return home</a>
+                <a href="/delete/{{{posts.id}}}/{{{posts.owner_id}}}" class="btn btn-danger">Delete <span class="glyphicon glyphicon-remove"></span></a>
+
+            </div>
+        </div>
+        {{/each}}
+    </fieldset>
+</form>
+</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="wrapper">
+        {{#each post as |posts|}}
+            <h1>{{posts.title}}</h1>
+            <h2>Blog Post By {{posts.owner_name}}</h2>
+            <hr>
+            <img height="400" src="{{{posts.image_url}}}">
+            <hr>
+            {{posts.content}}
+            <hr>
+            Post on {{posts.c_date}}
+            <hr>
+        {{/each}}
+        <a href="/" class="btn btn-primary">Return home</a>
+    </div>
+</div>

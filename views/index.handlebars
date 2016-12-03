@@ -1,0 +1,40 @@
+{{#if user}}
+    <div class="container">
+        <div class="wrapper">
+            <h2><p>Welcome <b>{{user.username}}</b></p></h2>
+            <table>
+                <tr>
+                        <a href="/get_all_posts" class="xbtn btn btn-primary">See all posts</a>
+                        &nbsp;
+                        <a href="/see_this_users_posts/{{{user._id}}}" class="btn btn-success">See your posts</a>
+                        &nbsp;
+                        <a href="/make_new_post" class="btn btn-info">
+                        Create new Post
+                        <span class="glyphicon glyphicon-send"></span></a>
+                        &nbsp;
+                        <a href="/logout" class="btn btn-warning">Logout</a>
+                        &nbsp;
+                    {{#if admin}}
+                        <a href="/admin/list" class="btn btn-success">
+                            Admin Dashboard <span class="glyphicon glyphicon-sunglasses"></span>
+                        </a>
+                    {{else}}
+                        <h3>Blogs are fun!</h3>
+                    {{/if}}
+                </tr>
+            </table>
+        </div>
+    </div>
+{{else}}
+    <div class="container">
+        <div class="wrapper">
+            <div class="center-title">
+                <h1>Welcome to U_Blogger</h1>
+                <a href="/login" class="xbtn btn btn-success">Click Here to Login</a>
+                <a href="/register" class="xbtn btn btn-info">Register a new account</a>
+                <a href="/get_all_posts" class="xbtn btn btn-primary">Check out our posts</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{{/if}}
