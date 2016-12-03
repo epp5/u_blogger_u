@@ -20,41 +20,6 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
 
-/////////////////////In class notes///////////////////////////////
-//
-// so like /posts/dash/:username
-// isOwner:
-// req.user && req.user.username === req.params.username
-//
-// app.get('/post/:username/:postid',function(req,res, next){
-//    Post.findOne({_id: req.params.postid});
-//    function(this.post){
-//        if(thisPost.owner===req.user.username){
-//
-//        }
-//    }
-// }
-// check lab 5
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
 // Set up body parser and cookie parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
